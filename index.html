@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Agustín Ferrari</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <header>
+    <img src="img/Foto_portafolio.jpg" class="logo" alt="Portafolio">
+  </header>
+  <!-- Encabezado con barra de navegación -->
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#tarjetas">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#peliculas">Películas favotitas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav> 
+  <main>
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="seccion-sobre-mi">
+      <div class="contenedor-cv">
+        <div class="foto-cv">
+          <img src="img/Foto.png" alt="Mi foto">
+        </div>
+        <div class="info-cv">
+          <h2>Agustín Ferrari</h2>
+          <p>¡Hola! Soy estudiante de Desarrollo de Software a distancia. Me encuentro dando mis primeros pasos en el mundo IT.</p>
+          <p>Actualmente me estoy formando en <strong>programación con lenguaje C#</strong> y en <strong>gestión de bases de datos</strong>.</p>
+          <p>Me motiva aprender nuevas tecnologías y desarrollarme profesionalmente en el área del desarrollo web y de software.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Tarjetas -->
+    <section id="tarjetas">
+      <h2>Proyectos</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="img/gestion_empresarial.jpg" class="proyecto" alt="Gestion empresarial">
+          <p>Desarrollo y programación de software para gestión administrativa de empresas.</p>
+        </div>
+        <div class="card">
+          <img src="img/Base_de_datos.jpg" class="proyecto" alt="Base de datos">
+          <p>Diseño y mantenimiento de bases de datos.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contenedor de Habilidades y Contacto -->
+    <section class="contenedor-horizontal">
+      <!-- Sección Habilidades -->
+      <section id="habilidades" class="bloque uno">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Gestión de bases de datos como MySql y MS Access</li>
+          <li>Programación en lenguaje C# y Phyton</li>
+          <li>Manejo de GitHub y Figma</li>
+          <li>Nociones básicas de HTML, CSS y JavaScript</li>
+        </ul>
+      </section>
+      <!-- Sección Contacto -->
+      <section id="contacto" class="bloque dos">
+        <h2>Contacto</h2>
+        <form class="form-grid">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </section>
+
+    <!-- Sección Películas -->
+    <section id="peliculas">
+      <h2>Películas Favoritas</h2>
+      <div class="peliculas">
+        <div>
+          <h3>Forest Gump</h3>
+          <img src="img/Forest_Gump.jpg" alt="Forest Gump">
+          <p>Una historia entrañable sobre un hombre con una vida extraordinaria, que recorre décadas de la historia estadounidense.</p>
+        </div>
+        <div>
+          <h3>Rapsodia Bohemia</h3>
+          <img src="img/Rapsodia_Bohemia.jpg" alt="Rapsodia Bohemia">
+          <p>Un homenaje a la banda Queen y a su icónico líder Freddie Mercury.</p>
+        </div>
+        <div>
+          <h3>El Padrino</h3>
+          <img src="img/El_Padrino.jpg" alt="El Padrino">
+          <p>Una obra maestra del cine que narra el ascenso de la familia Corleone en el mundo del crimen organizado</p>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Agustín Ferrari - Sígueme en <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </footer>
+</body>
+</html>
