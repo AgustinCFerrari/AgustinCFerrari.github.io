@@ -1,7 +1,7 @@
 
 # Trabajo Práctico - Portafolio Personal
 
-Este proyecto es un Trabajo Práctico (TP) que consiste en crear una landing page de portafolio personal utilizando HTML y CSS. La página presenta información ficticia de un desarrollador web, incluyendo presentación personal, proyectos, habilidades, películas favoritas y formulario de contacto.
+Este proyecto es un Trabajo Práctico (TP) que consiste en crear una landing page de portafolio personal utilizando HTML y CSS. La página presenta información sobre un desarrollador de software, incluyendo presentación personal, proyectos, habilidades, películas favoritas y formulario de contacto.
 
 ## Checklist - Práctica Formativa Obligatoria 1
 
@@ -14,7 +14,7 @@ Este proyecto es un Trabajo Práctico (TP) que consiste en crear una landing pag
 • Uso de Google Fonts:
 [x] Enlace a Google Fonts incluido en el "head".
 [x] La tipografía importada se aplica en el sitio.
-Respuesta: Elegí Roboto por su claridad, legibilidad y estilo moderno.
+Respuesta: Elegí Monserrat por su claridad, legibilidad y estilo moderno.
 
 • HTML:
 [x] DOCTYPE y lang="es" incluidos.
