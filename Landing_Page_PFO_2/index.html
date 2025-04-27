@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio Personal</title>
+     <!-- Vinculo a la fuente Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div>
+  <!-- Botón para cambiar entre modo oscuro y claro -->
+  <button id="modoToggle">🌙 Modo Oscuro</button>
+</div>
+
+
+  <header>
+    <img src="img/Foto_portafolio.jpg" class="logo" alt="Portafolio">
+  </header>
+  <!-- Encabezado con barra de navegación -->
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#tarjetas">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#peliculas">Películas favotitas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      
+    </ul>
+    <button id="toggleSobreMi">Mostrar/Ocultar Sobre Mí</button>
+  </nav>
+
+  <main>
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="seccion-sobre-mi">
+      <div class="contenedor-cv">
+        <div class="foto-cv">
+          <img src="img/foto.jpg" alt="Mi foto" class="foto-perfil">
+        </div>
+        <div class="info-cv">
+          <h2>Agustín Ferrari</h2>
+          <p>¡Hola! Soy estudiante de Desarrollo de Software a distancia. Me encuentro dando mis primeros pasos en el mundo IT.</p>
+          <p>Actualmente me estoy formando en <strong>programación con lenguaje C#</strong> y en <strong>gestión de bases de datos</strong>.</p>
+          <p>Me motiva aprender nuevas tecnologías y desarrollarme profesionalmente en el área del desarrollo web y de software.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Tarjetas -->
+    <section id="tarjetas">
+      <h2>Proyectos</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="img/gestion_empresarial.jpg" class="proyecto" alt="Gestion empresarial">
+          <p>Desarrollo y programación de software para gestión administrativa de empresas.</p>
+        </div>
+        <div class="card">
+          <img src="img/Base_de_datos.jpg" class="proyecto" alt="Base de datos">
+          <p>Diseño y mantenimiento de bases de datos.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contenedor de Habilidades y Contacto -->
+    <section class="contenedor-horizontal">
+      <!-- Sección Habilidades -->
+      <section id="habilidades" class="bloque-uno">
+        <h2>Habilidades</h2>
+        <!-- Lista desordenada -->
+        <ul>
+          <li>Gestión de bases de datos como MySql y MS Access</li>
+          <li>Programación en lenguaje C# y Phyton</li>
+          <li>Manejo de GitHub y Figma</li>
+          <li>Nociones básicas de HTML, CSS y JavaScript</li>
+        </ul>
+      </section>
+      <!-- Sección Contacto -->
+      <section id="contacto" class="bloque-dos">
+        <h2>Contacto</h2>
+        <form class="form-grid">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </section>
+
+    <!-- Sección Películas -->
+    <section id="peliculas">
+      <h2>Películas Favoritas</h2>
+      <div class="peliculas">
+        <div>
+          <h3>El Padrino</h3>
+          <img src="img/El_Padrino.jpg" alt="El Padrino">
+          <p>Una obra maestra del cine que narra el ascenso de la familia Corleone en el mundo del crimen organizado</p>
+        </div>
+        <div>
+          <h3>Rapsodia Bohemia</h3>
+          <img src="img/Rapsodia_Bohemia.jpg" alt="Rapsodia Bohemia">
+          <p>Un homenaje a la banda Queen y a su icónico líder Freddie Mercury.</p>
+        </div>
+        <div>
+          <h3>Forest Gump</h3>
+          <img src="img/Forest_Gump.jpg" alt="Forest Gump">
+          <p>Una historia entrañable sobre un hombre con una vida extraordinaria, que recorre décadas de la historia estadounidense.</p>
+        </div>
+        
+      </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Agustín Ferrari - Sígueme en <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </footer>
+
+<script>
+
+// FUNCIONALIDAD 1: Modo oscuro/claro
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('modoToggle');
+  const body = document.body;
+
+  // Verificar si hay una preferencia guardada
+  if (localStorage.getItem('modo') === 'oscuro') {
+    body.classList.add('modo-oscuro');
+    toggleBtn.textContent = '☀️ Modo Claro';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('modo-oscuro');
+    const esOscuro = body.classList.contains('modo-oscuro');
+    toggleBtn.textContent = esOscuro ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+    localStorage.setItem('modo', esOscuro ? 'oscuro' : 'claro');
+  });
+
+  // FUNCIONALIDAD 2: Confirmación de envío
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Detiene el envío real
+    alert('¡Formulario enviado correctamente!');
+    form.reset();
+  });
+});
+
+// FUNCIONALIDAD 3: Contador de visitas
+document.addEventListener('DOMContentLoaded', () => {
+  let visitas = localStorage.getItem('contadorVisitas');
+  visitas = visitas ? parseInt(visitas) + 1 : 1;
+  localStorage.setItem('contadorVisitas', visitas);
+
+  const contador = document.createElement('div');
+  contador.textContent = `Nº de visitas: ${visitas}`;
+  contador.style.position = 'fixed';
+  contador.style.bottom = '10px';
+  contador.style.right = '10px';
+  contador.style.background = '#598593';
+  contador.style.color = 'Black';
+  contador.style.padding = '8px 12px';
+  contador.style.borderRadius = '8px';
+  contador.style.fontSize = '0.9rem';
+  contador.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.5)';
+  document.body.appendChild(contador);
+});
+
+// FUNCIONALIDAD 4: Animaciones dinámicas con clases
+window.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('header, nav, .contenedor-cv, .card-container, .contenedor-horizontal, .peliculas div');
+  cards.forEach((el, i) => {
+    el.classList.add('animated');
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, i * 200);
+  });
+});
+
+// FUNCIONALIDAD 5: Mostrar/Ocultar sección "Sobre mí"
+document.addEventListener('DOMContentLoaded', () => {
+  const btnToggle = document.getElementById('toggleSobreMi');
+  const sobreMi = document.getElementById('sobre-mi');
+
+// Inicialmente ocultar la sección "Sobre mí"
+btnToggle.addEventListener('click', () => {
+  const estiloSobreMi = window.getComputedStyle(sobreMi);
+   
+    if (estiloSobreMi.display === 'none') {
+      sobreMi.style.display = 'flex';
+      sobreMi.style.flexDirection = 'column';
+      sobreMi.style.alignItems = 'center';
+    } else {
+      sobreMi.style.display = 'none';
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+
+body {
+  background: linear-gradient(to right,  #2a5e6e, #798c97);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo boton Modo Oscuro/Claro */
+body div button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: #798c97;
+  color: #02002a;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+body button:hover {
+  background: #2a5e6e;
+  color: #ffffff;
+}
+
+/* Estilo para el encabezado */
+header {
+  margin: 0 auto;
+  background-color: #002631;
+  justify-content: center;
+}
+
+header img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+/*Estilos para la barra de navegación */
+nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto; 
+  background: linear-gradient(to right,  #798c97, #2a5e6e);
+}
+
+nav ul li {
+  margin: 0;
+  padding-inline: 2rem;
+  display: inline-table;
+}
+
+nav ul li a {
+  color: #02002a;
+  display: block;
+}
+
+nav button {
+  background: #798c97;
+  color: #02002a;
+  border: none;
+  margin: 1rem;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 100px;
+}
+nav button:hover {
+  background: #2a5e6e;
+  color: #ffffff;
+}
+
+main {
+  color: #02002a;
+  padding: 2rem;
+}
+
+/* Estilo para sección de "Sobre mi"*/
+.seccion-sobre-mi {
+  padding: 2rem 2rem;
+  align-items: center;
+  max-width: 1100px;
+  background: #798c97;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin: 0rem 7rem;
+  flex-wrap: wrap;
+}
+
+.info-cv {
+  flex: 1;
+  min-width: 100px;
+}
+
+.info-cv h2 {
+  margin: 0rem 0 1rem 0;
+  font-size: 1.5rem;
+  color: #02002a;
+
+}
+
+.info-cv p {
+  margin: 0rem 0;
+  font-size: 1.1rem;
+  color: #02002a;
+  line-height: 1.5;
+}
+
+.foto-cv img {
+  width: 185px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Estilo para sección de Proyectos*/
+#tarjetas h2 {
+  text-align: center;
+}
+
+/* Estilo para contenedor de tarjetas*/
+#tarjetas .card-container {
+  justify-content: center;
+  color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: visible;
+}
+
+.card {
+  max-width: 500px;
+  margin: 40px;
+  border-radius: 15px;
+  background: #b97b00;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  flex: 1 1 45%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+  width: 100%;         /* La imagen se adapta al ancho del contenedor .card */
+  height: auto;        /* Mantiene la proporción original de la imagen */
+  border-radius: 10px; 
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(0);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* Contenedor horizontal de Habilidades y Contacto */
+.contenedor-horizontal {
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  padding: auto;
+  align-items: center;
+  max-width: 1160px;
+}
+
+/* Estilo para los bloques dentro del contenedor horizontal */
+/* Primer bloque ocupa 1/3 del ancho */
+.bloque-uno {
+  margin-right: 4rem;
+  padding: 2rem;
+  flex: 1; /* parte proporcional menor */
+  min-width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.bloque-uno:hover {
+  background-color: #c2c6c8;
+  transform: scale(1.08) ;
+  transition: background 0.4s ease-in-out;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* Mejora la visibilad en el bloque de habilidades*/
+.bloque-uno ul {
+  list-style: disc inside;
+  padding-left: 0;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+
+/* Segundo bloque ocupa 2/3 del ancho */
+.bloque-dos {
+  flex: 2; /* parte proporcional mayor */
+  padding: 10px 30px 10px;
+  min-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.form-grid {
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid; /* Activa CSS Grid */
+  grid-template-columns: 1fr 6fr; /* Dos columnas relacion 1:6 */
+  gap: 0.5rem; /* Espacio entre columnas y filas */
+}
+
+/* Que las etiquetas ocupen una sola columna */
+.form-grid label {
+  grid-column: span 1;
+  font-size: 1.1rem;
+}
+
+/* Que cada input se alinie con su etiqueta */
+.form-grid input {
+  grid-column: span 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Botón ocupa las dos columnas (fila completa) y se centra */
+.form-grid button {
+  grid-column: span 2; /* Ocupa ambas columnas */
+  justify-self: center; 
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  background-color: #2a5e6e;
+  color: #02002a;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.form-grid button:hover {
+  background-color: #c2c6c8;
+}
+
+
+/* Estilo para el contenedor de peliculas*/
+#peliculas {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Contenedor de las tres películas */
+.peliculas {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Cada bloque de película */
+.peliculas div {
+  color: #000000;
+  width: 300px;
+  background-color: #efa525;
+  padding: 15px;
+  border-radius: 15px;
+  transition: transform 0.4s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.peliculas div:hover {
+  transform: translateY(-20px);
+}
+
+/* Títulos individuales de las peliculas*/
+.peliculas h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c0132;
+}
+
+/* Estilo para el footer */
+footer {
+  background: linear-gradient(to right,  #798c97, #2a5e6e);
+  color: #02002a;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+footer a {
+  color: #f6c605; /* color del enlace */
+  text-decoration: none; /* opcional: quita el subrayado */
+}
+
+
+/* Estilo para el botón de modo oscuro */
+/* Estilos para modo oscuro */
+
+body.modo-oscuro {
+  background: linear-gradient(to right,  #000000, #474747);
+  background-color: #121212;
+  color: #ffffff;
+}
+body.modo-oscuro header,
+body.modo-oscuro footer {
+  background-color: #1e1e1e;
+  background: linear-gradient(to right,  #1e1e1e, #353535);
+  color: #ffffff;
+}
+
+body.modo-oscuro .logo {
+  filter: grayscale(100%);
+}
+
+body.modo-oscuro nav { 
+  background: linear-gradient(to right,  #1e1e1e, #353535);
+}
+
+body.modo-oscuro nav ul li a {
+  color: #ffffff;
+}
+
+body.modo-oscuro #sobre-mi {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+}
+
+body.modo-oscuro .foto-perfil {
+  filter: grayscale(100%);
+}
+
+body.modo-oscuro .info-cv h2{
+  color: #ffffff; 
+}
+
+body.modo-oscuro .info-cv p {
+  color: #ffffff; 
+}
+
+body.modo-oscuro .card,
+body.modo-oscuro .bloque-uno,
+body.modo-oscuro .bloque-dos,
+body.modo-oscuro .peliculas div {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.modo-oscuro .bloque-uno:hover {
+  background-color: #737373;
+}
+
+body.modo-oscuro #tarjetas {
+  color: #ffffff
+}
+
+body.modo-oscuro #peliculas {
+  color: #ffffff
+}
+
+body.modo-oscuro .peliculas h3{
+  color: #ffffff
+}
+
+body.modo-oscuro .bloque button {
+  background-color: #757272;
+  color: #ffffff;
+}
+body.modo-oscuro .bloque.dos button:hover {
+  background-color: #373737;
+}
+
+/* Definicion de clases de animacion para mantener los estilos hover:*/
+.animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.animated.visible {
+  opacity: 1;
+  transform: none; /* ya no pisa el hover */
+}
+
